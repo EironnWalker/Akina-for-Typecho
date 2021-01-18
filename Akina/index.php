@@ -147,7 +147,7 @@ if($this->options->sticky){
 </div>
 <!-- 聚焦内容 -->
 <div class="top-feature">
-	<h1 class="fes-title">聚焦</h1>
+	<h1 class="fes-title">Focus</h1>
 		<div class="feature-content">
 		<?php
 			$featureCid = explode(',', strtr($this->options->featureCids, ' ', ','));
