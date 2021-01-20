@@ -147,7 +147,7 @@ if($this->options->sticky){
 </div>
 <!-- 聚焦内容 -->
 <div class="top-feature">
-	<h1 class="fes-title">聚焦</h1>
+	<h1 class="fes-title">Focus</h1>
 		<div class="feature-content">
 		<?php
 			$featureCid = explode(',', strtr($this->options->featureCids, ' ', ','));
@@ -179,7 +179,7 @@ if($this->options->sticky){
 <!-- 主页内容 -->
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-	<h1 class="main-title">近况</h1>
+	<h1 class="main-title">Recent</h1>
 <!-- 结束搜索判断 -->
 <?php endif; ?>
 		<!-- 开始文章循环输出 -->
