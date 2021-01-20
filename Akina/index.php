@@ -147,7 +147,7 @@ if($this->options->sticky){
 </div>
 <!-- 聚焦内容 -->
 <div class="top-feature">
-	<h1 class="fes-title">Focus</h1>
+	<h1 class="fes-title">聚焦</h1>
 		<div class="feature-content">
 		<?php
 			$featureCid = explode(',', strtr($this->options->featureCids, ' ', ','));
@@ -179,28 +179,30 @@ if($this->options->sticky){
 <!-- 主页内容 -->
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-	<h1 class="main-title">Recent</h1>
+	<h1 class="main-title">近况</h1>
 <!-- 结束搜索判断 -->
 <?php endif; ?>
 		<!-- 开始文章循环输出 -->
 		<?php while($this->next()): ?>
 		<article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
 		<!-- 判断文章输出样式 -->
-		<?php if (array_key_exists('dt',unserialize($this->___fields()))): ?>
+		<?php if ($this->fields->dtMode): ?>
 		<div class="post-status">
 			<div class="postava">
 				<a href="<?php $this->permalink() ?>"><img alt="avatar" src="<?php echo theprofile ?>" srcset="<?php echo theprofile ?> 2x" class="avatar avatar-64 photo" height="64" width="64"></a>
 			</div>
 			<div class="s-content">
+				<a href="<?php $this->permalink() ?>">
 				<p><?php $this->excerpt(70, '...'); ?></p>
 				<div class="s-time"><i class="iconfont">&#xe604;</i><?php $this->date('Y-n-j'); ?><?php if(Postviews($this)>=1000) echo"<i class='iconfont hotpost' style='margin-left: 5px;'>&#xe618;</i>" ?>
 </div>
+				</a>
 			</div>
 			<footer class="entry-footer">
 		<?php else: ?>
 			<div class="post-entry">
 				<div class="feature">
-					<a href="<?php $this->permalink() ?>"><div class="overlay"><i class="iconfont">&#xe61e;</i></div><img src="<?php if(array_key_exists('icon',unserialize($this->___fields()))){$this->fields->icon();}else{echo theurl.'images/random/deu'.mt_rand(1,7).'.jpg';}?>"></a>
+					<a href="<?php $this->permalink() ?>"><div class="overlay"><i class="iconfont">&#xe61e;</i></div><img src="<?php if(array_key_exists('icon',unserialize($this->___fields())) & $this->fields->icon != null){$this->fields->icon();}else{echo theurl.'images/random/deu'.mt_rand(1,7).'.jpg';}?>"></a>
 				</div>
 				<h1 class="entry-title"><a href="<?php $this->permalink() ?>"><?php $this->sticky(); $this->title() ?></a></h1>
 				<div class="p-time">
