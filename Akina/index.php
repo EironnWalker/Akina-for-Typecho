@@ -169,7 +169,7 @@ if($this->options->sticky){
 				}
 			} else {
 				echo '
-				<li class="feature-1"><a href="https://zhebk.cn/Web/Akina.html"><div class="feature-title"><span class="foverlay">Akina</span></div><img src="'.theurl.'/images/feature/feature1.jpg"></a></li>
+				<li class="feature-1"><a href="https://eironnwalker.github.io"><div class="feature-title"><span class="foverlay">gitpage</span></div><img src="'.theurl.'/images/feature/feature1.jpg"></a></li>
 				<li class="feature-2"><a href="https://zhebk.cn/Web/userAkina.html"><div class="feature-title"><span class="foverlay">使用说明</span></div><img src="'.theurl.'/images/feature/feature2.jpg"></a></li>
 				<li class="feature-3"><a href="https://zhebk.cn/archives.html"><div class="feature-title"><span class="foverlay">文章归档</span></div><img src="'.theurl.'/images/feature/feature3.jpg"></a></li>';
 			}
